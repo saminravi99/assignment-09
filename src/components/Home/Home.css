@@ -33,7 +33,13 @@
     font-family: Quicksand;
 }
 
+.home-review-star{
+    color: #F46A06;
+
+}
+
 .star-icon{
     width: 21px;
-    margin-bottom: 4px
+    margin-bottom: 4px;
+    color: #F46A06;
 }
