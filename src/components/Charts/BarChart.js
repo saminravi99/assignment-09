@@ -11,17 +11,19 @@ import {
 import { AllContext } from "../App/App";
 
 
+
 export default function BarCharts() {
     const {data} = useContext(AllContext);
+
   return (
     <BarChart
-      width={375}
+      width={450}
       height={300}
       data={data}
       margin={{
-        top: 5,
+        top: 20,
         right: 30,
-        left: 20,
+        left: 30,
         bottom: 5
       }}
     >
@@ -30,8 +32,8 @@ export default function BarCharts() {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="investment" fill="#8884d8" />
-      <Bar dataKey="revenue" fill="#82ca9d" />
+      <Bar dataKey="investment" stackId="a" fill="#ffa35c" />
+      <Bar dataKey="revenue" stackId="a" fill="#e65447" />
     </BarChart>
   );
 }

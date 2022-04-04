@@ -3,21 +3,34 @@ import { PieChart, Pie, Tooltip } from "recharts";
 import { AllContext } from "../App/App";
 
 
+
 export default function PieCharts() {
-const {data} = useContext(AllContext);
+
+
+    const {data} = useContext(AllContext);
+
 
   return (
-    <PieChart width={400} height={400}>
+    <PieChart width={420} height={400}>
+      <Pie
+        data={data}
+        dataKey="investment"
+        cx={200}
+        cy={200}
+        outerRadius={60}
+        fill="#ffa35c"
+      />
       <Pie
         data={data}
         dataKey="revenue"
         cx={200}
         cy={200}
-        outerRadius={150}
-        fill="#8884d8"
+        innerRadius={90}
+        outerRadius={120}
+        fill="#f2b872"
+        label
       />
-        <Tooltip />
-      
+      <Tooltip />
     </PieChart>
   );
 }
