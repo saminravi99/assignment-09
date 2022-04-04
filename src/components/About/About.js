@@ -15,7 +15,7 @@ const About = () => {
                     <img className="img-fluid" src={FoodOne} alt="img" />
                 </div>
                 <div className="w-75 food-one-text p-lg-5">
-                    <h3>We pride ourselves on making the best foo review in the town.</h3>
+                    <h3>We pride ourselves on making the best restaurant review in the town.</h3>
                     <p>
                         Chef Stephen’s dishes are based on what the local ocean has to offer. Some of the ingredients we use come right from local businesses, while others come from our farmers markets.”The Seafood Orchid includes Maine lobster tails and shrimp, Maine clams, salmon and local and organic vegetables in a ponzu soy ginger broth, which is prepared tableside.
                     </p>
