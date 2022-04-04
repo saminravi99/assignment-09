@@ -18,10 +18,21 @@
 .nav-link{
     font-family: Roboto;
     font-weight: 700;
+    padding-bottom: 3px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    border-bottom: 3px solid ;
+    /* border-radius: 3px; */
 }
 
 .nav-link:hover{
     color: #F46A06 !important;
+    border-bottom: 3px solid #F46A06;
+    padding-bottom: 3px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    /* border-radius: 3px; */
 }
 
 .active-link{
@@ -30,6 +41,12 @@
     text-decoration: none !important;
     font-weight: 700;
     font-family: Roboto;
+    padding-bottom: 3px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+    border-bottom: 3px solid #F46A06;
+
 }
 
 .active-link:hover{
