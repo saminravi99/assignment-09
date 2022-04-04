@@ -11,7 +11,7 @@ const Header = () => {
         <div className={pathname === "/home" ? "d-block" :
         pathname === "/reviews" ? "d-block" :
         pathname === "/dashboard" ? "d-block" :
-        pathname === "blogs" ? "d-block" :
+        pathname === "/blogs" ? "d-block" :
         pathname === "/about" ? "d-block" :
         pathname === "/" ? "d-block" :
         "d-none" 
