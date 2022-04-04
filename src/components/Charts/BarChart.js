@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   BarChart,
   Bar,
@@ -15,10 +15,26 @@ import { AllContext } from "../App/App";
 export default function BarCharts() {
     const {data} = useContext(AllContext);
 
+    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+    console.log(windowWidth);
+
+    useEffect(() => {
+        window.addEventListener("resize", handleWindowSizeChange);
+        return () => {
+            window.removeEventListener("resize", handleWindowSizeChange);
+        };
+    }
+    );
+
+    function handleWindowSizeChange() {
+        setWindowWidth(window.innerWidth);
+    }
+
   return (
     <BarChart
-      width={450}
-      height={300}
+      width={windowWidth <= 768 ? 375 : 500}
+      height={400}
       data={data}
       margin={{
         top: 20,

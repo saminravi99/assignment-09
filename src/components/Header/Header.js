@@ -1,12 +1,23 @@
 import "./Header.css";
 import React from 'react';
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
+
+    const {pathname} = useLocation();
+    console.log(pathname);
     return (
-        <div className="nav-bar">
-            <Navbar expand="lg">
+        <div className={pathname === "/home" ? "d-block" :
+        pathname === "/reviews" ? "d-block" :
+        pathname === "/dashboard" ? "d-block" :
+        pathname === "blogs" ? "d-block" :
+        pathname === "/about" ? "d-block" :
+        pathname === "/" ? "d-block" :
+        "d-none" 
+         }>
+            <div className="nav-bar">
+            <Navbar className="nav-container" expand="lg">
                 <Container>
                     <Link className="link" to="/">
                         <h1 className="logo-text">Food<span>DX</span> </h1>
@@ -36,6 +47,8 @@ const Header = () => {
                 </Container>
             </Navbar>
         </div>
+        </div>
+        
     );
 };
 

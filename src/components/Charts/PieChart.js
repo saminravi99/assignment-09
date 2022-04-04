@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { PieChart, Pie, Tooltip } from "recharts";
 import { AllContext } from "../App/App";
 
@@ -9,9 +9,26 @@ export default function PieCharts() {
 
     const {data} = useContext(AllContext);
 
+     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+    console.log(windowWidth);
+
+    useEffect(() => {
+        window.addEventListener("resize", handleWindowSizeChange);
+        return () => {
+            window.removeEventListener("resize", handleWindowSizeChange);
+        };
+    }
+    );
+
+    function handleWindowSizeChange() {
+        setWindowWidth(window.innerWidth);
+    }
+
 
   return (
-    <PieChart width={420} height={400}>
+    <PieChart width={windowWidth <= 768 ? 375 : 500}
+     height={400}>
       <Pie
         data={data}
         dataKey="investment"
@@ -25,8 +42,8 @@ export default function PieCharts() {
         dataKey="revenue"
         cx={200}
         cy={200}
-        innerRadius={90}
-        outerRadius={120}
+        innerRadius={85}
+        outerRadius={110}
         fill="#f2b872"
         label
       />

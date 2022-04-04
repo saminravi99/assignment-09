@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import {
   AreaChart,
   Area,
@@ -14,11 +14,28 @@ import { AllContext } from "../App/App";
 export default function AreaCharts() {
 
     const {data} = useContext(AllContext);
+    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+    console.log(windowWidth);
+
+    useEffect(() => {
+        window.addEventListener("resize", handleWindowSizeChange);
+        return () => {
+            window.removeEventListener("resize", handleWindowSizeChange);
+        };
+    }
+    );
+
+    function handleWindowSizeChange() {
+        setWindowWidth(window.innerWidth);
+    }
+
+
 
   return (
     <AreaChart
-      width={450}
-      height={250}
+      width={windowWidth <= 768 ? 375 : 500}
+      height={300}
       data={data}
       margin={{
         top: 10,
