@@ -10,6 +10,7 @@ import About from '../About/About';
 import NotFound from '../NotFound/NotFound';
 import useReviews from '../hooks/useReviews';
 import useData from '../hooks/useData';
+import useBlogs from '../hooks/useBlogs';
 import Header from '../Header/Header';
 
 export const AllContext = createContext();
@@ -21,12 +22,15 @@ function App() {
 
   const reviews = useReviews();
   const data = useData();
+  const blogs = useBlogs();
+
+  // console.log(blogs)
 
 
 
 
   return (
-    <AllContext.Provider value={{reviews, data}}>
+    <AllContext.Provider value={{reviews, data, blogs}}>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>

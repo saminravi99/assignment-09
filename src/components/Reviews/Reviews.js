@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AllContext } from '../App/App';
-import EachReview from './EachReview/EachReview';
+import EachReview from '../EachReview/EachReview';
 import './Reviews.css';
 
 

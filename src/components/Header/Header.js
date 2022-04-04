@@ -28,7 +28,7 @@ const Header = () => {
                             BLOGS
                         </NavLink>
                         <NavLink className={({isActive}) => isActive ? `active-link mx-4 p-0` : `nav-link mx-4 p-0`} to="/about">
-                            ABOUT
+                            ABOUT US
                         </NavLink>
                         
                     </Nav>
