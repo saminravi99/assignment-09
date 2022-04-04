@@ -12,6 +12,7 @@ import useReviews from '../hooks/useReviews';
 import useData from '../hooks/useData';
 import useBlogs from '../hooks/useBlogs';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 export const AllContext = createContext();
 
@@ -41,6 +42,7 @@ function App() {
         <Route path="/about" element={<About></About>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
     </Routes>
+    <Footer></Footer>
     </AllContext.Provider>
 
   );
