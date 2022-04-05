@@ -17,7 +17,6 @@ export default function BarCharts() {
 
     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
-    console.log(windowWidth);
 
     useEffect(() => {
         window.addEventListener("resize", handleWindowSizeChange);

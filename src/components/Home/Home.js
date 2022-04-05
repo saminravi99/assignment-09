@@ -18,7 +18,7 @@ const Home = () => {
 
     const homeReview = slicedReviews.map(review => {
         return(
-            <div className="col-md-4 col-12 my-3 my-lg-0 ">
+            <div key={review.id} className="col-md-4 col-12 my-3 my-lg-0 ">
                 <div className="card home-review-container  h-100">
                     <div className="card-body">
                         <cite className="card-text home-review">"{review.review}"</cite>

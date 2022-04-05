@@ -16,7 +16,6 @@ export default function AreaCharts() {
     const {data} = useContext(AllContext);
     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
 
-    console.log(windowWidth);
 
     useEffect(() => {
         window.addEventListener("resize", handleWindowSizeChange);

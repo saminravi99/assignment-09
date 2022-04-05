@@ -6,7 +6,6 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const Header = () => {
 
     const {pathname} = useLocation();
-    console.log(pathname);
     return (
         <div className={pathname === "/home" ? "d-block" :
         pathname === "/reviews" ? "d-block" :
